@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+{% block page %}Home{% endblock %}
+{% block heading %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+<p> {{ message }}</p>
+<ul>
+    {% for n in mylist %}
+     <li>{{n}}</li>
+     {% endfor %}
+</ul>			
+<p>Value from the list: {{mylist[2]}}</p>
+	{% block footer %}
+  		{{super()}}
+  	{% endblock %}
+{% endblock %}
